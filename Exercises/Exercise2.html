@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 1. ODD/EVEN NUMBER
+   Write an if...else statement that:
+	prints "even" if the number is an even number
+	prints "odd" if the number is an odd number
+
+<script>
+
+let number = parseInt(prompt("Enter any Number: "), 10);
+
+function EvenOdd(number) {
+    if (number % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+
+alert("The number is " + EvenOdd(number));
+
+</script>
+-->  
+
+<!-- 2. ODD/EVEN NUMBER
+Write a series of conditional statements that:
+●	Prints "not a group" if musicians is less than or equal to 0
+●	Prints "solo" if musicians is equal to 1
+●	Prints "duet" if musicians is equal to 2
+●	Prints "trio" if musicians is equal to 3
+●	Prints "quartet" if musicians is equal to 4
+●	Prints "this is a large group" if musicians is greater than 4
+
+
+<script>
+
+let musicianNum = 7;
+
+function tone(musician) {
+    if (musician <= 0) {
+        return "Not a group";
+    } else if (musician === 1) {
+        return "Solo";
+    } else if (musician === 2) {
+        return "Duet";
+    } else if (musician === 3) {
+        return "Trio";
+    } else if (musician === 4) {
+        return "Quartet";
+    } else if (musician > 4) {
+        return "This is a large Group";
+    }
+}
+
+alert(tone(musicianNum));
+
+</script>
+-->  
+
+<!-- 3. MURDER MYSTERY
+you're going to help solve a fictitious murder mystery that happened at Stutern! 
+A murder mystery is a game typically played at parties wherein one of the partygoers 
+is secretly, and unknowingly, playing a murderer, and the other attendees must determine 
+who among them is the criminal. It's a classic case of whodunnit.
+
+To help solve this mystery, write a combination of conditional statements that:
+1.	sets the value of weapon based on the room and
+2.	sets the value of solved to true if the value of room matches the suspect's room
+
+<script>
+
+// Variables
+let room = "Dining Room"; 
+let suspect = "Mr. Parkes";
+
+let weapon;
+let solved = false;
+
+if (room === "Ballroom") {
+    weapon = "Poison";
+} else if (room === "Gallery") {
+    weapon = "Trophy";
+} else if (room === "Billiard Room") {
+    weapon = "Pool Stick";
+} else if (room === "Dining Room") {
+    weapon = "Knife";
+}
+
+
+if ((room === "Dining Room" && suspect === "Mr. Parkes") ||
+    (room === "Gallery" && suspect === "Ms. Van Cleve") ||
+    (room === "Billiards Room" && suspect === "Mrs. Sparr") ||
+    (room === "Ballroom" && suspect === "Mr. Kalehoff")) {
+    solved = true;
+}
+
+if (solved) {
+    alert(`${suspect} did it in the ${room} with the ${weapon}!`);
+} else {
+    alert("The mystery is not solved yet.");
+}
+
+</script>
+--> 
+
+<!-- 4. CHECK BALANCE
+<script>
+
+let checkBalance = true; 
+let isActive = true;       
+let balance = 325.00;          
+
+if (checkBalance) {
+    if (isActive && balance > 0) {
+        alert("Your balance is $" + balance + ".");
+    } else if (!isActive) {
+        alert("Your account is no longer active.");
+    } else if (balance === 0) {
+        alert("Your account is empty.");
+    } else {
+        alert("Your balance is negative. Please contact bank.");
+    }
+} else {
+    alert("Thank you. Have a nice day!");
+}
+
+</script>
+--> 
+
+<!-- 5. ICECREAM ORDER
+ Ice cream is one of the most versatile desserts on the planet because it can be done up so 
+ many different ways. Using logical operators, write a series of complex logical expressions that 
+ prints only if the following conditions are true:
+
+●	if flavor is set to vanilla or chocolate and
+●	if vessel is set to cone or bowl and
+●	if toppings is set to sprinkles or peanuts
+If the above conditions are true, then print out:
+
+I'd like two scoops of __________ ice cream in a __________ with __________.
+
+<script>
+
+let flavor = "vanilla"; 
+let vessel = "cone";   
+let toppings = "sprinkles";
+
+if (
+    (flavor === "vanilla" || flavor === "chocolate") &&
+    (vessel === "cone" || vessel === "bowl") &&
+    (toppings === "sprinkles" || toppings === "peanuts")
+) {
+    alert(`I'd like two scoops of ${flavor} ice cream in a ${vessel} with ${toppings}.`);
+}
+
+</script>
+--> 
+
+<!-- 6. CLOTH SIZES
+Use the sizing chart above, create a series of logical expressions that prints the size of a 
+t-shirt based on the measurements of shirtWidth, shirtLength, and shirtSleeve. 
+Valid sizes include S, M, L, XL, 2XL, and 3XL.
+
+<script>
+var shirtWidth = 19;  
+var shirtLength = 28;    
+var shirtSleeve = 8.21;
+
+if (
+    shirtWidth >= 18 && shirtWidth <= 19 &&
+    shirtLength === 28 &&
+    shirtSleeve >= 8.13 && shirtSleeve <= 8.38
+) {
+    alert("S");
+} else if (
+    shirtWidth >= 20 && shirtWidth <= 22 &&
+    shirtLength === 29 &&
+    shirtSleeve >= 8.38 && shirtSleeve <= 8.63
+) {
+    alert("M");
+} else if (
+    shirtWidth >= 22 && shirtWidth <= 24 &&
+    shirtLength === 30 &&
+    shirtSleeve >= 8.63 && shirtSleeve <= 8.88
+) {
+    alert("L");
+} else if (
+    shirtWidth >= 24 && shirtWidth <= 26 &&
+    shirtLength === 31 &&
+    shirtSleeve >= 8.88 && shirtSleeve <= 9.63
+) {
+    alert("XL");
+} else if (
+    shirtWidth >= 26 && shirtWidth <= 28 &&
+    shirtLength === 33 &&
+    shirtSleeve >= 9.63 && shirtSleeve <= 10.13
+) {
+    alert("2XL");
+} else if (
+    shirtWidth >= 28 && shirtWidth <= 30 &&
+    shirtLength === 34 &&
+    shirtSleeve >= 10.13 && shirtSleeve <= 10.38
+) {
+    alert("3XL");
+} else {
+    alert("N/A");
+}
+
+</script>
+--> 
+
+<!-- 7. CONSUMER-BASED CATEGORIES
+Write a series of ternary statements that sets the variable category equal to:
+●	"herbivore" if an animal eats plants
+●	"carnivore" if an animal eats animals
+●	"omnivore" if an animal eats plants and animals
+●	"undefined" if an animal doesn't eat plants or animals
+Use the eatsPlants and eatsAnimals variables to test your code.
+
+<script>
+
+let eatsPlants = true;
+let eatsAnimals = false;
+
+let category = eatsPlants && eatsAnimals ? "omnivore" :
+               eatsPlants ? "herbivore" :
+               eatsAnimals ? "carnivore" :
+               "undefined";
+
+alert(category);
+
+</script>
+--> 
+
+
+<!-- 8. SALARY OUTCOME
+Write a switch statement to set the average salary of a person based on their type of completed education.
+Afterwards, print the following to the console.
+In 2015, a person with __________ earned an average of __________/year.
+
+<script>
+
+let education = "no high school diploma";
+let salary;
+
+switch (education) {
+    case "no high school diploma":
+        salary = 25636;
+        break;
+    case "high school diploma":
+        salary = 35256;
+        break;
+    case "Associate's degree":
+        salary = 41496;
+        break;
+    case "Bachelor's degree":
+        salary = 59124;
+        break;
+    case "Master's degree":
+        salary = 69732;
+        break;
+    case "Professional degree":
+        salary = 89960;
+        break;
+    case "Doctoral degree":
+        salary = 84396;
+        break;
+    default:
+        salary = "unknown";
+}
+
+if (typeof salary === "number") {
+    salary = salary.toLocaleString("en-US");
+}
+
+alert(`In 2015, a person with ${education} earned an average of $${salary} per year.`);
+
+
+
+</script>
+--> 
+</body>
+</html>
