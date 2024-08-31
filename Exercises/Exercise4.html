@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Four: Loops</title>
+</head>
+<body>
+<!-- 1. FIZZBUZZ
+     Write a while loop that:
+●	Loop through the numbers 1 to 20
+●	If the number is divisible by 3, print "Fizz"
+●	If the number is divisible by 5, print "Buzz"
+●	If the number is divisible by 3 and 5, print "FizzBuzz"
+●	If the number is not divisible by 3 or 5, print the number
+
+<script>
+let i = 1;
+
+while (i <= 20) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    alert("FizzBuzz");
+  }
+  else if (i % 3 === 0) {
+    alert("Fizz");
+  }
+  else if (i % 5 === 0) {
+    alert("Buzz");
+  }
+  else {
+    alert(i);
+  }
+  
+  i++;
+}
+
+</script>
+-->
+
+<!-- 2. 99 BOTTLES OF JUICE
+Write a loop that prints out the following song. Starting at 99, and ending at 1 bottle.
+99 bottles of juice on the wall! 99 bottles of juice! Take one down, pass it around... 98 bottles of juice on the wall!
+98 bottles of juice on the wall! 98 bottles of juice! Take one down, pass it around... 97 bottles of juice on the wall!
+...
+2 bottles of juice on the wall! 2 bottles of juice! Take one down, pass it around... 1 bottle of juice on the wall!
+1 bottle of juice on the wall! 1 bottle of juice! Take one down, pass it around... 0 bottles of juice on the wall!
+
+
+<script>
+let bottles = 5;
+
+while (bottles > 0) {
+  alert(bottles + " bottles of juice on the wall! " + bottles + " bottles of juice! Take one down, pass it around... " + (bottles - 1) + " bottles of juice on the wall!");
+
+  bottles--;
+
+  if (bottles === 1) {
+    alert(bottles + " bottle of juice on the wall! " + bottles + " bottle of juice! Take one down, pass it around... " + (bottles - 1) + " bottles of juice on the wall!");
+    break;
+  }
+}
+
+</script>
+-->
+
+<!-- 3. NASA'S COUNTDOWN TO LAUNCH
+NASA's countdown to launch includes checkpoints where NASA engineers complete certain technical tasks. During the final minute, NASA has 6 tasks to complete:
+●	Orbiter transfers from ground to internal power (T-50 seconds)
+●	Ground launch sequencer is go for auto sequence start (T-31 seconds)
+●	Activate launch pad sound suppression system (T-16 seconds)
+●	Activate main engine hydrogen burnoff system (T-10 seconds)
+●	Main engine start (T-6 seconds)
+●	Solid rocket booster ignition and liftoff! (T-0 seconds)
+
+
+<script>
+let countdown = 50;
+
+while (countdown >= 0) {
+  switch (countdown) {
+    case 50:
+      alert("Orbiter transfers from ground to internal power (T-50 seconds)");
+      break;
+    case 31:
+      alert("Ground launch sequencer is go for auto sequence start (T-31 seconds)");
+      break;
+    case 16:
+      alert("Activate launch pad sound suppression system (T-16 seconds)");
+      break;
+    case 10:
+      alert("Activate main engine hydrogen burnoff system (T-10 seconds)");
+      break;
+    case 6:
+      alert("Main engine start (T-6 seconds)");
+      break;
+    case 0:
+      alert("Solid rocket booster ignition and liftoff! (T-0 seconds)");
+      break;
+    default:
+      console.log("T-" + countdown + " seconds");
+  }
+  countdown--;
+}
+
+</script>
+-->
+
+<!-- 4. HELLO USING FOR LOOP
+Rewrite the following while loop as a for loop:
+var x = 9;
+while (x >= 1) {
+  console.log("hello " + x);
+  x = x - 1;
+}
+
+<script>
+for(let x = 9; x >= 1; x = x-1){
+    alert("Hello " + x)
+}
+
+</script>
+-->
+
+<!-- 5. 
+Here is a for loop that's supposed to print the numbers 5 through 9. Fix the error!
+for (x < 10; x++) {
+  console.log(x);
+}
+
+<script>
+
+for(let x = 5; x < 10; x++){
+    alert(x)
+}
+
+</script>
+-->
+
+<!-- 6. 
+The for loop below has an error. Fix it!
+for (let k = 0 k < 200 k++) {
+  console.log(k);
+}
+
+<script>
+
+for (let k = 0; k < 200; k++) {
+  alert(k);
+}
+
+</script>
+-->
+
+<!-- 7. FACTORIAL OF 12 
+Write a for (note: not a function) loop that prints out the factorial of the number 12:
+
+<script>
+
+let factorial = 1;
+let calculation = "";
+
+for (let i = 12; i >= 1; i--) {
+  factorial *= i;
+  
+  if (i === 1) {
+    calculation += i; 
+  } else {
+    calculation += i + " * ";
+  }
+}
+
+alert("12! = " + calculation + " = " + factorial);
+
+</script>
+-->
+
+<!-- 8. THEATRE SIT COUNT 
+
+Theatre seats often display a row and seat number to help theatre goers find their seats. 
+If there are 26 rows (0 to 25) and 100 seats (0 to 99) in each row, write a nested for loop 
+to print out all of the different seat combinations in the theatre.
+
+<script>
+
+for (let row = 0; row < 26; row++) {
+  for (let seat = 0; seat < 100; seat++) {
+    alert("Row " + row + ", Seat " + seat);
+  }
+}
+
+</script>
+-->
+</body>
+</html>

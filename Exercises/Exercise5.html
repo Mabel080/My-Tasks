@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5: Functions</title>
+</head>
+<body>
+
+<!-- 1. LAUGH FUNCTION NUMBER
+     Declare a function called laugh() that returns "hahahahahahahahahaha!". 
+     Print the value returned from the laugh() function to the console.
+
+<script>
+
+function laugh() {
+  return "hahahahahahahahahaha!";
+}
+alert(laugh());
+
+</script>
+-->
+
+<!-- 2. LAUGH FUNCTION NUMBER
+Write a function called laugh() that takes one parameter, 
+num that represents the number of "ha"s to return.
+
+<script>
+function laugh(num) {
+  const haCount = num.split("ha").length - 1;
+  return haCount;
+}
+
+alert(laugh("hahahahahahaha"));
+
+</script>
+-->
+
+<!-- 3. LAUGH FUNCTION NUMBER
+Create a function called buildTriangle() that will accept an input (the triangle at its widest width) 
+and will return the string representation of a triangle. 
+
+<script>
+function buildTriangle(count) {
+  let result = "";
+  for (let i = 1; i <= count; i++) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+      line += "* ";
+    }
+    result += line.trim() + "\n";
+  }
+  return result;
+}
+alert(buildTriangle(11));
+
+</script>
+-->
+
+<!-- 4. LAUGH FUNCTION ANONYMOUS
+Write an anonymous function expression that stores a function in a variable called "laugh" and 
+outputs the number of "ha"s that you pass in as an argument
+<script>
+function laugh(num) {
+  let laughter = "";
+
+  for (let i = 0; i < num; i++) {
+    laughter += "ha";
+  }
+
+  return laughter + "!";
+}
+  
+alert(laugh(10));
+
+</script>
+-->
+
+<!-- 5. CRY FUNCTION
+Write a named function expression that stores the function in a variable called cry and returns "boohoo!". 
+Don't forget to call the function using the variable name, not the function name:
+<script>
+
+var cry = function tears() {
+  return "Boohoo!";
+}
+alert(cry());
+
+</script>
+-->
+</body>
+</html>
