@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Exercise</title>
+</head>
+<body>
+    <!-- 1. CREATE A MULTIPLICATION TABLE USING A NESTED FOR LOOP-->
+     <script>
+for (let x = 1; x <= 12; x++) {
+    let mul = ' ';
+    for (let y = 1; y <= 8; y++) {
+        let result = `${y} * ${x} = ${y * x}`;
+        mul += result.padEnd(16, ' ');
+    }
+    alert(mul);
+}
+     </script>
+</body>
+</html>
