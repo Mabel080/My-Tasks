@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Seven: Object</title>
+</head>
+<body>
+<!--1. UMBRELLA
+Using the umbrella example from the class slide, see if you can follow the example open() method and 
+create the close() method.
+
+const umbrella = {
+ color: "pink",
+ isOpen: false,
+ open: function() {
+   if (umbrella.isOpen === true) {
+     return "The umbrella is already opened!";
+   } else {
+     umbrella.isOpen = true;
+     return "Julia opens the umbrella!";
+   }
+  }
+};
+
+<script>
+const umbrellas = {
+  color: "purple",
+  isClosed: false,
+  close: function() {
+    if (umbrellas.isClosed === true) {
+      return "The Umbrella is already Closed";
+    } else {
+      umbrellas.isClosed = true;
+      return "Who left the Umbrella Opened?";
+    }
+  }
+};
+
+alert(umbrellas.close());
+
+</script>
+-->
+
+<!--2. MENU ITEMS
+Create a breakfast object to represent the following menu item:
+
+The Lumberjack - $9.95
+eggs, sausage, toast, hashbrowns, pancakes
+The object should contain properties for the name, price, and ingredients.
+
+
+<script>
+let breakFast = {
+   name: "The Lumberjack",
+   price: "$9.95",
+   ingredient: ["eggs", "sausage", "toast", "hashbrowns", "pancakes"]
+};
+alert(breakFast);
+</script>
+-->
+
+<!--3. BANK ACCOUNT
+Using the given object:
+
+const savingsAccount = {
+ balance: 1000,
+ interestRatePercent: 1,
+ deposit: function addMoney(amount) {
+   if (amount > 0) {
+     savingsAccount.balance += amount;
+   }
+ },
+ withdraw: function removeMoney(amount) {
+   var verifyBalance = savingsAccount.balance - amount;
+   if (amount > 0 && verifyBalance >= 0) {
+     savingsAccount.balance -= amount;
+   }
+ }
+};
+add a printAccountSummary() method that returns the following account message:
+
+Welcome!
+Your balance is currently $1000 and your interest rate is 1%.
+
+<script>
+const savingsAccount = {
+  balance: 1000,
+  interestRatePercent: 1,
+
+  deposit: function addMoney(amount) {
+    if (amount > 0) {
+      this.balance += amount;
+    }
+  },
+
+  withdraw: function removeMoney(amount) {
+    var verifyBalance = this.balance - amount;
+    if (amount > 0 && verifyBalance >= 0) {
+      this.balance -= amount;
+    }
+  },
+
+  printAccountSummary: function() {
+    return `Welcome!\nYour balance is currently $${this.balance} and your interest rate is ${this.interestRatePercent}%.`;
+  }
+};
+
+alert("Initial balance:  $" + savingsAccount.balance);
+
+savingsAccount.withdraw(200);
+alert("Balance after withdrawing $200 is:  $" + savingsAccount.balance);
+
+alert(savingsAccount.printAccountSummary());
+</script>
+-->
+
+<!--4. QUESTIONS AND ANSWERS
+Using the object from exercise 3, answer the following quiz question:
+Which of the following are valid ways to access properties and call methods from the savingsAccount object?
+1.	savingsAccount.balance;
+2.	savingsAccount[balance];
+3.	savingsAccount[“balance”];
+4.	savingsAccount.”balance”;
+5.	savingsAccount.withdraw = 50;
+6.	savingsAccount.removeMoney = 50;
+7.	savingsAccount.withdraw(50);
+8.	savingsAccount.removeMoney(50);
+
+
+<script>
+1. savingsAccount.balance;
+This is the standard way to access an object's property using dot notation.The balance property is correctly 
+accessed using savingsAccount.balance.
+
+3. savingsAccount["balance"];
+This is an alternative way of accessing the balance property using bracket notation. In bracket notation, 
+you can use a string to refer to the property name ("balance"). This is particularly useful when the property 
+name is dynamic or when it contains spaces or special characters.
+
+7. savingsAccount.withdraw(50);
+This is the correct way to call the withdraw method of savingsAccount. The withdraw method is a defined 
+function in the savingsAccount object. Calling it with an argument like 50 is the proper way to invoke the 
+method.
+
+</script>
+-->
+
+<!--5. FACEBOOK FRIENDS
+Create an object called facebookProfile. The object should have 3 properties:
+
+1.	your name
+2.	the number of friends you have, and
+3.	an array of messages you've posted (as strings)
+
+The object should also have 4 methods:
+
+1.	postMessage(message) - adds a new message string to the array
+2.	deleteMessage(index) - removes the message corresponding to the index provided
+3.	addFriend() - increases the friend count by 1
+4.	removeFriend() - decreases the friend count by 1
+
+
+<script>
+const facebookProfile = {
+  name: "Maybel",
+  friendCount: 20, 
+  messages: ["Welcome to my profile!", "It's nice having you here"],
+
+  postMessage: function(message) {
+    this.messages.push(message); 
+  },
+
+  deleteMessage: function(index) {
+    if (index >= 0 && index < this.messages.length) {
+      this.messages.splice(index, 1);
+    } else {
+      alert("Invalid index");
+    }
+  },
+
+  addFriend: function() {
+    this.friendCount += 1;
+  },
+
+  removeFriend: function() {
+    if (this.friendCount > 0) {
+      this.friendCount -= 1; 
+    } else {
+      alert("No friends to remove!");
+    }
+  }
+};
+
+
+facebookProfile.postMessage("Just joined this platform!");
+alert("Messages after adding new one:  " + facebookProfile.messages);
+
+facebookProfile.deleteMessage(1);
+alert("Messages after deleting message at index 1:  "  + facebookProfile.messages);
+
+facebookProfile.addFriend();
+alert("Friend count after adding a friend:  " + facebookProfile.friendCount);
+
+
+facebookProfile.removeFriend();
+alert("Friend count after removing a friend:  " + facebookProfile.friendCount);
+</script>
+-->
+
+<!--6. OBJECT IN ARRAY(DONUT REVISITED)
+Here is an array of donut objects.
+
+const donuts = [
+ { type: "Jelly", cost: 1.22 },
+ { type: "Chocolate", cost: 2.45 },
+ { type: "Cider", cost: 1.59 },
+ { type: "Boston Cream", cost: 5.99 }
+];
+Use the forEach() method to loop over the array and print out the following donut summaries using console.log.
+Jelly donuts cost $1.22 each
+Chocolate donuts cost $2.45 each
+Cider donuts cost $1.59 each
+Boston Cream donuts cost $5.99 each
+
+<script>
+const donuts = [
+   { type: "Jelly", cost: 1.22 },
+   { type: "Chocolate", cost: 2.45 },
+   { type: "Cider", cost: 1.59 },
+   { type: "Boston Cream", cost: 5.99 }
+];
+
+donuts.forEach(function(donut) {
+  alert(`${donut.type} donuts cost $${donut.cost} each`);
+});
+</script>
+-->
+</body>
+</html>
